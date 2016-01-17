@@ -1,0 +1,54 @@
+﻿<!doctype html>
+
+<html>
+<head>
+    <title>Systems of Linear Equations</title>
+    
+    <script src="js/Michailov.Base.js"></script>
+    <script src="js/Michailov.Math.js"></script>
+    <script src="js/Michailov.Equations.js"></script>
+    <script src="js/Michailov.Equations.Constraints.js"></script>
+    <script src="js/Michailov.Equations.UI.js"></script>
+    
+    <link href="css/Michailov.Equations.css" rel="stylesheet" />
+
+    <script>
+        //Michailov.Options.debugEnabled = true;
+    </script>
+</head>
+<body onload="Michailov.Equations.UI.onStartPageLoad();">
+    <p id="header" class="page-title center">&nbsp;&nbsp;&nbsp;Systems of Linear Equations <span id="appEdition">(Unlicensed)</span></p>
+
+    <div id="body" class="page-body center">
+        <p>
+            <select id="RankBox">
+                <option value="2">x, y</option>
+                <option value="3">x, y, z</option>
+                <option value="4">x, y, z, p</option>
+                <option value="5">x, y, z, p, q</option>
+            </select>
+        </p>
+        <p>
+            <select id="CoeffLimitBox">
+                <option value="10">10</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+            </select>
+        </p>
+        <p>
+            <span id="StartButton" class="button" onclick="window.location = 'problem.html#{&quot;rank&quot; : ' + document.getElementById('RankBox').value + ', &quot;coeffLimit&quot; : ' + document.getElementById('CoeffLimitBox').value + '}';">&#xe111;</span>
+        </p>
+    </div>
+
+    <div id="footer">
+        <div>
+            <p class="copyright" style="margin-left: 20pt">
+                Version <span id="appVersion">0.0</span><br />
+                Designed and written by Zlatko Michailov.<br />
+                For support, go to <a href="http://zlatko.michailov.org/search/label/Equations">http://zlatko.michailov.org/search/label/Equations</a><br />
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>

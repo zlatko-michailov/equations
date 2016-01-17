@@ -1,0 +1,113 @@
+﻿<!doctype html>
+
+<html>
+<head>
+    <title>Systems of Linear Equations</title>
+    
+    <script src="js/Michailov.Base.js"></script>
+    <script src="js/Michailov.Math.js"></script>
+    <script src="js/Michailov.Equations.js"></script>
+    <script src="js/Michailov.Equations.Constraints.js"></script>
+    <script src="js/Michailov.Equations.UI.js"></script>
+    
+    <link href="css/Michailov.Equations.css" rel="stylesheet" />
+
+    <script>
+        //Michailov.Options.debugEnabled = true;
+    </script>
+</head>
+<body onload="Michailov.Equations.UI.onProblemPageLoad();">
+    <p id="header" class="page-title">&nbsp;<span id="BackButton" class="button" onclick="window.history.back();">&#xe112;</span>&nbsp;&nbsp;Systems of Linear Equations <span id="appEdition">(Unlicensed)</span><br /><br /></p>
+
+    <div id="body" class="page-body">
+        <p class="section-title">&nbsp;<span id="ProblemButton" class="button" onclick="Michailov.Equations.UI.showNewProblem();">&#xe14a;</span>&nbsp;&nbsp;Problem</p>
+        <div id="Problem">
+        </div>
+
+        <p class="section-title">&nbsp;<span id="AnswerButton" class="button" onclick="Michailov.Equations.UI.showAnswer();">&#xe10c;</span>&nbsp;&nbsp;Answer</p>
+        <div id="Answer" class="hidden">
+        </div>
+
+        <p class="section-title">&nbsp;<span id="SolutionButton" class="button" onclick="Michailov.Equations.UI.showSolution();">&#xe10c;</span>&nbsp;&nbsp;Solution</p>
+        <div class="section-body">
+            <div id="Solution" class="hidden">
+                <p>Sorry, solutions are not enabled in this edition/trial. Please consider purchasing the standard edition.</p>
+            </div>
+        </div>
+
+        <p class="section-title">&nbsp;<span id="MethodButton" class="button" onclick="Michailov.Equations.UI.showMethod();">&#xe10c;</span>&nbsp;&nbsp;Method</p>
+        <div class="section-body">
+            <div id="Method" class="hidden">
+                <p>This method is known as <i>Gaussian Elimination</i>. It is named after its inventor <a href="http://en.wikipedia.org/wiki/Carl_Friedrich_Gauss">Carl Friedrich Gauss</a>.</p>
+
+                <p>The method consists of two distinct phases - <i>Elimination</i> and <i>Substitution</i> performed in this order.</p>
+
+                <p class="section-subtitle">Elimination</p>
+                <p>
+                    During the Elimination phase unknown variables get eliminated one by one which also obsoletes one equation at a time.
+                    Thus the number of unknown variables and the number of equations remain equal.
+                    The process of elimination relies on the following facts:
+                </p>
+                <ol>
+                    <li>Multiplying the two sides of an equation doesn't change the equation.</li>
+                    <li>Adding or subtracting two equations yields a valid equation.</li>
+                    <li>The order of equations in a system doesn't matter.</li>
+                </ol>
+
+                <p>Each elimination iteration consists of the following steps:</p>
+                <ol>
+                    <li>Pick a "base" equation that will be used to add or subtract from the other equations.</li>
+                    <li>
+                        For each of the other equations, pick two factors - one for the current equation and another one for the base equation -
+                        so that the coefficient in front of the variable that is being eliminated has the same absolute value in both multiplied equations.
+                    </li>
+                    <li>Add or subtract the two equations so that the subject variable doesn't appear in the resulting equation.</li>
+                    <li>Record the resulting equation as part of a new system.</li>
+                </ol>
+                <p>
+                    Thus, after each iteration there is a new system that has one less equation and one less unknown variable than the system from the previous iteration.
+                    The phase is complete when there is one equation with one variable left.
+                </p>
+
+                <p>That equation is trivial to solve. Once the value of a variable has been found, the substitution phase begins.</p>
+
+                <p class="section-subtitle">Substitution</p>
+                <p>
+                    The substitution phase consumes the intermediate results from the elimination phase in reverse order -
+                    the next to last iteration produced a system of two equations with two unknown variables.
+                    One of those variables is already known.
+                    Substituting that variable with its value in either of those two equations yields another simple equation with just one unknown variable
+                    which is also trivial to solve. Thus the value of the second unknown variable is found.
+                </p>
+
+                <p>
+                    In general, intermediate elimination results are backtracked with all known variables substituted with their values in any one of the equations.
+                    That leads to a simple equation with just one unknown variable which is easy to solve, i.e. the value of one more unknown variable gets determined.
+                    The substitution phase ends when the values of all unknown variables have been determined.
+                </p>
+
+                <p class="section-subtitle">Remarks</p>
+                <p>
+                    While the order of eliminating variables doesn't matter, this implementation eliminates variables in "reverse" order.
+                    That way substitution determines variable values in prime order, i.e. first x, then y, then z, etc.
+                </p>
+            </div>
+        </div>
+
+        <div id="Debug" class="hidden">
+            <p class="section-title">Debug</p>
+        </div>
+    </div> <!-- page body -->
+
+    <div id="footer">
+        <div>
+            <p class="copyright" style="margin-left: 20pt">
+                Version <span id="appVersion">0.0</span><br />
+                Designed and written by Zlatko Michailov.<br />
+                For support, go to <a href="http://zlatko.michailov.org/search/label/Equations">http://zlatko.michailov.org/search/label/Equations</a><br />
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+﻿
+/*************************************************
+ Common styles
+ *************************************************/
+
+ .page-title {
+    font-family: 'Segoe UI Semibold';
+    font-size: 22pt;
+    color: black;
+    padding-top: 5pt;
+    padding-bottom: 8pt;
+}
+
+.page-body {
+    overflow-y: scroll;
+    margin-left: 10pt;
+    margin-right: 10pt;
+    margin-bottom: 10pt;
+    height: 400pt;
+}
+
+ .copyright {
+    font-family: 'Segoe UI';
+    font-size: 12pt;
+    color: black;
+    padding-top: 5pt;
+    padding-bottom: 8pt;
+}
+
+
+/*************************************************
+ Start page styles
+ *************************************************/
+
+.center {
+    text-align: center;
+}
+
+
+/*************************************************
+ Problem page styles
+ *************************************************/
+
+.section-title {
+    font-family: 'Segoe UI Semibold';
+    font-size: 16pt;
+    text-transform: uppercase;
+    color: black;
+    background-color: #d8d8d8;
+    padding-top: 5pt;
+    padding-bottom: 8pt;
+}
+
+.section-subtitle {
+    font-family: 'Segoe UI';
+    font-size: 16pt;
+    font-weight: bold;
+    color: black;
+}
+
+.section-body {
+    font-family: 'Segoe UI';
+    font-size: 15pt;
+    color: black;
+}
+
+.button {
+    font-family: 'Segoe UI Symbol';
+    font-size: 12pt;
+    font-weight: bold;
+    color: black;
+    padding: 5pt 5pt 5pt 5pt;
+    border-radius: 20pt;
+    border: 1.6pt solid;
+    border-color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.visible {
+    display: inline;
+}
+
+.hidden {
+    display: none;
+}
+
+.code {
+    font-family: 'Courier New';
+    font-size: 13pt;
+    color: black;
+}
+
+td {
+    border-width: 0;
+}
+
+.equation {
+}
+
+.multiline {
+    border-style: solid; 
+    border-width: 0px 0px 0px thin;
+    padding-left: 4pt;
+}
+
+.equation-item {
+    text-align: right; 
+    padding: inherit;
+}
+
+.equation-value {
+    text-align: left; 
+    padding: inherit;
+}
+
+.variable {
+    color: blue;
+    font-style: italic;
+}
+
+.root {
+    background-color: #e8e8e8;
+}
