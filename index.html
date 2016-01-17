@@ -17,11 +17,11 @@
     </script>
 </head>
 <body onload="Michailov.Equations.UI.onStartPageLoad();">
-    <p id="header" class="page-title center">&nbsp;&nbsp;&nbsp;Systems of Linear Equations <span id="appEdition">(Unlicensed)</span></p>
+    <div id="header" class="page-title center">Systems of Linear Equations <span id="appEdition"></span></div>
 
     <div id="body" class="page-body center">
         <p>
-            <select id="RankBox">
+            <select id="RankBox" class="selector">
                 <option value="2">x, y</option>
                 <option value="3">x, y, z</option>
                 <option value="4">x, y, z, p</option>
@@ -29,14 +29,18 @@
             </select>
         </p>
         <p>
-            <select id="CoeffLimitBox">
+            <br />
+            <br />
+            <select id="CoeffLimitBox" class="selector">
                 <option value="10">10</option>
                 <option value="50">50</option>
                 <option value="100">100</option>
             </select>
         </p>
         <p>
-            <span id="StartButton" class="button" onclick="window.location = 'problem.html#{&quot;rank&quot; : ' + document.getElementById('RankBox').value + ', &quot;coeffLimit&quot; : ' + document.getElementById('CoeffLimitBox').value + '}';">&#xe111;</span>
+            <br />
+            <br />
+            <span id="StartButton" class="button" onclick="window.location = 'problem.html#{&quot;rank&quot; : ' + document.getElementById('RankBox').value + ', &quot;coeffLimit&quot; : ' + document.getElementById('CoeffLimitBox').value + '}';">&nbsp;&nbsp;&gt;&nbsp;&nbsp;</span>
         </p>
     </div>
 

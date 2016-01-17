@@ -6,11 +6,6 @@ Michailov.Equations.UI = {
 
         document.getElementById("appEdition").innerHTML = Michailov.Equations.Constraints.appEdition;
         document.getElementById("appVersion").innerHTML = Michailov.Equations.Constraints.appVersion;
-
-        var bodyHeight = document.body.clientHeight - document.getElementById("header").offsetHeight - document.getElementById("footer").offsetHeight - 100;
-        var bodyStyle = document.getElementById("body").style;
-        bodyStyle += "; height: " + bodyHeight + "px";
-        document.getElementById("body").setAttribute("style", bodyStyle);
     },
 
     onStartPageLoad: function() {
@@ -173,10 +168,10 @@ Michailov.Equations.UI = {
         return this[memberName];
     },
     
-    showButtonTitle: "&#xe10c;",
-    hideButtonTitle: "&#xe10a;",
-    refreshButtonTitle: "&#xe14a;",
-    backButtonTitle: "&#xe112;",
+    showButtonTitle: "&nbsp;+&nbsp;",
+    hideButtonTitle: "&nbsp;-&nbsp;",
+    refreshButtonTitle: "&nbsp;X&nbsp;",
+    backButtonTitle: "&nbsp;=&nbsp;",
     
     visibleState: "visible",
     hiddenState: "hidden",

@@ -17,25 +17,33 @@
     </script>
 </head>
 <body onload="Michailov.Equations.UI.onProblemPageLoad();">
-    <p id="header" class="page-title">&nbsp;<span id="BackButton" class="button" onclick="window.history.back();">&#xe112;</span>&nbsp;&nbsp;Systems of Linear Equations <span id="appEdition">(Unlicensed)</span><br /><br /></p>
+    <div>
+        <span id="BackButton" class="button" onclick="window.history.back();">&nbsp;&lt;&nbsp;</span>
+        <span id="header" class="page-title">&nbsp;&nbsp;Systems of Linear Equations <span id="appEdition"></span>
+        <br />
+        <br />
+    </div>
 
     <div id="body" class="page-body">
-        <p class="section-title">&nbsp;<span id="ProblemButton" class="button" onclick="Michailov.Equations.UI.showNewProblem();">&#xe14a;</span>&nbsp;&nbsp;Problem</p>
+        <p class="section-title">&nbsp;<span id="ProblemButton" class="button" onclick="Michailov.Equations.UI.showNewProblem();">&nbsp;X&nbsp;</span>&nbsp;&nbsp;Problem</p>
         <div id="Problem">
         </div>
 
-        <p class="section-title">&nbsp;<span id="AnswerButton" class="button" onclick="Michailov.Equations.UI.showAnswer();">&#xe10c;</span>&nbsp;&nbsp;Answer</p>
+        <br />
+        <p class="section-title">&nbsp;<span id="AnswerButton" class="button" onclick="Michailov.Equations.UI.showAnswer();">&nbsp;+&nbsp;</span>&nbsp;&nbsp;Answer</p>
         <div id="Answer" class="hidden">
         </div>
 
-        <p class="section-title">&nbsp;<span id="SolutionButton" class="button" onclick="Michailov.Equations.UI.showSolution();">&#xe10c;</span>&nbsp;&nbsp;Solution</p>
+        <br />
+        <p class="section-title">&nbsp;<span id="SolutionButton" class="button" onclick="Michailov.Equations.UI.showSolution();">&nbsp;+&nbsp;</span>&nbsp;&nbsp;Solution</p>
         <div class="section-body">
             <div id="Solution" class="hidden">
                 <p>Sorry, solutions are not enabled in this edition/trial. Please consider purchasing the standard edition.</p>
             </div>
         </div>
 
-        <p class="section-title">&nbsp;<span id="MethodButton" class="button" onclick="Michailov.Equations.UI.showMethod();">&#xe10c;</span>&nbsp;&nbsp;Method</p>
+        <br />
+        <p class="section-title">&nbsp;<span id="MethodButton" class="button" onclick="Michailov.Equations.UI.showMethod();">&nbsp;+&nbsp;</span>&nbsp;&nbsp;Method</p>
         <div class="section-body">
             <div id="Method" class="hidden">
                 <p>This method is known as <i>Gaussian Elimination</i>. It is named after its inventor <a href="http://en.wikipedia.org/wiki/Carl_Friedrich_Gauss">Carl Friedrich Gauss</a>.</p>
